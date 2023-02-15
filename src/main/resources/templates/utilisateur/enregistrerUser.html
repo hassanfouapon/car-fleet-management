@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Enregistrer un agent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- jsvectormap css -->
+    <th:block th:replace="fragments/css :: block_css">
+
+    </th:block>
+
+
+
+</head>
+
+<body>
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+    <div th:replace="fragments/topbar :: block_nav">
+
+    </div>
+
+    <!-- ========== App Menu ========== -->
+    <div class="app-menu navbar-menu">
+        <!-- LOGO -->
+        <div class="navbar-brand-box">
+            <!-- Dark Logo-->
+            <a href="../index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/images/logo-sm.png" alt="" height="22">
+                    </span>
+                <span class="logo-lg">
+                        <img src="/images/logo-dark.png" alt="" height="17">
+                    </span>
+            </a>
+            <!-- Light Logo-->
+            <a href="../index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/images/logo-sm.png" alt="" height="22">
+                    </span>
+                <span class="logo-lg">
+                        <img src="/images/logo-light.png" alt="" height="17">
+                    </span>
+            </a>
+            <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                <i class="ri-record-circle-line"></i>
+            </button>
+        </div>
+
+        <div th:replace="fragments/sidebar :: block_sidebar">
+
+
+        </div>
+
+    </div>
+    <!-- Left Sidebar End -->
+    <!-- Vertical Overlay-->
+    <div class="vertical-overlay"></div>
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <div class="live-preview">
+                                    <form method="post" th:action="@{/enregistrer_user}">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="firstNameinput" class="form-label">Nom</label>
+                                                    <input type="text"  class="form-control" name="nom" placeholder="Entrer le nom de l'utilisateur" id="firstNameinput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="lastNameinput" class="form-label">Prénom</label>
+                                                    <input type="text" class="form-control"  name="prenom" placeholder="Entrer le prenom de l'utilisateur" id="lastNameinput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="phonenumberInput" class="form-label">Teléphone</label>
+                                                    <input type="tel" class="form-control"  name="telephone" placeholder="+(237) ......" id="phonenumberInput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="emailidInput" class="form-label"> Addresse Email</label>
+                                                    <input type="email" class="form-control" name="email" placeholder="mefirefouaponhassan@gamil.com" id="emailidInput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="passwordInput" class="form-label">mot de passe</label>
+                                                    <input type="password" class="form-control" name="mot de passe" placeholder="" id="passwordInput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="PosteInput" class="form-label">Poste</label>
+                                                    <input type="text" class="form-control" name="poste" placeholder="" id="PosteInput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="MatriculeInput" class="form-label">Matricule</label>
+                                                    <input type="text" class="form-control" name="poste" placeholder="" id="MatriculeInput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="DateNaissance" class="form-label">DateNaissance</label>
+                                                    <input type="date" class="form-control" name="poste" placeholder="" id="DateNaissance">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="VilleInput" class="form-label">Ville Residence</label>
+                                                    <input type="text" class="form-control" name="Ville Residence" placeholder="" id="VilleInput">
+                                                </div>
+                                            </div><!--end col-->
+
+
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="ForminputSexe" class="form-label">Sexe</label>
+                                                    <select id="ForminputSexe" class="form-select" name="sexe" data-choices data-choices-sorting="true" >
+                                                        <option selected>Choisir...</option>
+                                                        <option value="MASCULIN">Masculin</option>
+                                                        <option value="FEMININ">Feminin</option>
+                                                    </select>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-12">
+                                                <div class="text-end">
+                                                    <button type="submit" class="btn btn-success">Enregistrer</button>
+                                                </div>
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <script>document.write(new Date().getFullYear())</script> © Velzon.
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            Designer et developpé par le groupe JEE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end main content-->
+
+    </div>
+
+    <!-- END layout-wrapper -->
+
+
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/libs/simplebar/simplebar.min.js"></script>
+    <script src="/libs/node-waves/waves.min.js"></script>
+    <script src="/libs/feather-icons/feather.min.js"></script>
+    <script src="/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="/js/plugins.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Vector map-->
+    <script src="/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="/libs/jsvectormap/maps/world-merc.js"></script>
+
+    <!--Swiper slider js-->
+    <script src="/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- App js -->
+    <script src="/js/app.js"></script>
+
+
+</body>
+
+
+</html>

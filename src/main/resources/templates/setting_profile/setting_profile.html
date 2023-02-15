@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fr" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <title>Profile</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <!-- jsvectormap css -->
+    <th:block th:replace="fragments/css :: block_css">
+
+    </th:block>
+</head>
+<body>
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+    <div th:replace="fragments/topbar :: block_nav">
+
+    </div>
+    <!-- ========== App Menu ========== -->
+    <div class="app-menu navbar-menu">
+        <!-- LOGO -->
+        <div class="navbar-brand-box">
+            <!-- Dark Logo-->
+            <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/images/logo-sm.png" alt="" height="22">
+                    </span>
+                <span class="logo-lg">
+                        <img src="/images/logo-dark.png" alt="" height="17">
+                    </span>
+            </a>
+            <!-- Light Logo-->
+            <a href="" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/images/logo-sm.png" alt="" height="22">
+                    </span>
+                <span class="logo-lg">
+                        <img src="/images/logo-light.png" alt="" height="17">
+                    </span>
+            </a>
+            <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                <i class="ri-record-circle-line"></i>
+            </button>
+        </div>
+
+
+        <div th:replace="fragments/sidebar :: block_sidebar">
+
+
+        </div>
+    </div>
+    <!-- Left Sidebar End -->
+    <!-- Vertical Overlay-->
+    <div class="vertical-overlay"></div>
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+
+                <div class="position-relative mx-n4 mt-n4">
+                    <div class="profile-wid-bg profile-setting-img">
+                        <img src="/images/profile-bg.jpg" class="profile-wid-img" alt="">
+                        <div class="overlay-content">
+                            <div class="text-end p-3">
+                                <div class="p-0 ms-auto rounded-circle profile-photo-edit">
+                                    <input id="profile-foreground-img-file-input" type="file"
+                                           class="profile-foreground-img-file-input">
+                                    <label for="profile-foreground-img-file-input"
+                                           class="profile-photo-edit btn btn-light">
+                                        <i class="ri-image-edit-line align-bottom me-1"></i> Changer couverture
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxl-3">
+                        <div class="card mt-n5">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <div class="profile-user position-relative d-inline-block mx-auto  mb-4">
+                                        <img src="/images/users/avatar-1.jpg"
+                                             class="rounded-circle avatar-xl img-thumbnail user-profile-image"
+                                             alt="user-profile-image">
+                                        <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
+                                            <input id="profile-img-file-input" type="file"
+                                                   class="profile-img-file-input">
+                                            <label for="profile-img-file-input"
+                                                   class="profile-photo-edit avatar-xs">
+                                                    <span class="avatar-title rounded-circle bg-light text-body">
+                                                        <i class="ri-camera-fill"></i>
+                                                    </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <h5 class="fs-16 mb-1" th:text="${#authentication.getPrincipal().getUsername()}">Anna Adame</h5>
+                                    <p class="text-muted mb-0" th:text="${#authentication.getPrincipal().getRole()}">Lead Designer / Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-5">
+                                    <div class="flex-grow-1">
+                                        <h5 class="card-title mb-0">Complete Your Profile</h5>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <a href="javascript:void(0);" class="badge bg-light text-primary fs-12"><i
+                                                class="ri-edit-box-line align-bottom me-1"></i> Edit</a>
+                                    </div>
+                                </div>
+                                <div class="progress animated-progress custom-progress progress-label">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%"
+                                         aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="label">30%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="flex-grow-1">
+                                        <h5 class="card-title mb-0">Portfolio</h5>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <a href="javascript:void(0);" class="badge bg-light text-primary fs-12"><i
+                                                class="ri-add-fill align-bottom me-1"></i> Add</a>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex">
+                                    <div class="avatar-xs d-block flex-shrink-0 me-3">
+                                            <span class="avatar-title rounded-circle fs-16 bg-dark text-light">
+                                                <i class="ri-github-fill"></i>
+                                            </span>
+                                    </div>
+                                    <input type="email" class="form-control" id="gitUsername" placeholder="Username"
+                                           value="@daveadame">
+                                </div>
+                                <div class="mb-3 d-flex">
+                                    <div class="avatar-xs d-block flex-shrink-0 me-3">
+                                            <span class="avatar-title rounded-circle fs-16 bg-primary">
+                                                <i class="ri-global-fill"></i>
+                                            </span>
+                                    </div>
+                                    <input type="text" class="form-control" id="websiteInput"
+                                           placeholder="www.example.com" value="www.velzon.com">
+                                </div>
+                                <div class="mb-3 d-flex">
+                                    <div class="avatar-xs d-block flex-shrink-0 me-3">
+                                            <span class="avatar-title rounded-circle fs-16 bg-success">
+                                                <i class="ri-dribbble-fill"></i>
+                                            </span>
+                                    </div>
+                                    <input type="text" class="form-control" id="dribbleName" placeholder="Username"
+                                           value="@dave_adame">
+                                </div>
+                                <div class="d-flex">
+                                    <div class="avatar-xs d-block flex-shrink-0 me-3">
+                                            <span class="avatar-title rounded-circle fs-16 bg-danger">
+                                                <i class="ri-pinterest-fill"></i>
+                                            </span>
+                                    </div>
+                                    <input type="text" class="form-control" id="pinterestName"
+                                           placeholder="Username" value="Advance Dave">
+                                </div>
+                            </div>
+                        </div>
+                        <!--end card-->
+                    </div>
+                    <!--end col-->
+                    <div class="col-xxl-9">
+                        <div class="card mt-xxl-n5">
+                            <div class="card-header">
+                                <ul class="nav nav-tabs-custom rounded card-header-tabs border-bottom-0"
+                                    role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#personalDetails"
+                                           role="tab">
+                                            <i class="fas fa-home"></i>
+                                            Details Personnels
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#changePassword" role="tab">
+                                            <i class="far fa-user"></i>
+                                            Changer mot de passe
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="personalDetails" role="tabpanel">
+                                        <form action="javascript:void(0);" >
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="mb-3">
+                                                        <label for="firstnameInput" class="form-label">
+                                                            Prenom</label>
+                                                        <input type="text" class="form-control" id="firstnameInput"
+                                                               placeholder="Enter your firstname" value="Dave">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-lg-6">
+                                                    <div class="mb-3">
+                                                        <label for="lastnameInput" class="form-label">
+                                                            Nom</label>
+                                                        <input type="text" class="form-control" id="lastnameInput"
+                                                               placeholder="Enter your lastname" value="Adame">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-lg-6">
+                                                    <div class="mb-3">
+                                                        <label for="phonenumberInput" class="form-label">Telephone
+                                                            </label>
+                                                        <input type="text" class="form-control"
+                                                               id="phonenumberInput"
+                                                               placeholder="Enter your phone number"
+                                                               value="+(1) 987 6543">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-lg-6">
+                                                    <div class="mb-3">
+                                                        <label for="emailInput" class="form-label">
+                                                            Address Email</label>
+                                                        <input type="email" class="form-control" id="emailInput"
+                                                               placeholder="Enter your email"
+                                                               value="daveadame@velzon.com">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+
+                                                <!--end col-->
+                                                <div class="col-lg-12">
+                                                    <div class="hstack gap-2 justify-content-end">
+                                                        <button type="submit"
+                                                                class="btn btn-primary">Modifier</button>
+                                                        <button type="button"
+                                                                class="btn btn-soft-success">Annuler</button>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                            </div>
+                                            <!--end row-->
+                                        </form>
+                                    </div>
+                                    <!--end tab-pane-->
+                                    <div class="tab-pane" id="changePassword" role="tabpanel">
+                                        <form action="javascript:void(0);">
+                                            <div class="row g-2">
+                                                <div class="col-lg-4">
+                                                    <div>
+                                                        <label for="oldpasswordInput" class="form-label">Ancien
+                                                            Mot de passe*</label>
+                                                        <input type="password" class="form-control"
+                                                               id="oldpasswordInput"
+                                                               placeholder="Entrer Mot de passe">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-lg-4">
+                                                    <div>
+                                                        <label for="newpasswordInput" class="form-label">Nouveau
+                                                            mot de passe</label>
+                                                        <input type="password" class="form-control"
+                                                               id="newpasswordInput" placeholder="Nouveau
+                                                            mot de passe">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-lg-4">
+                                                    <div>
+                                                        <label for="confirmpasswordInput" class="form-label">Confirmer
+                                                            mot de passe</label>
+                                                        <input type="password" class="form-control"
+                                                               id="confirmpasswordInput"
+                                                               placeholder="Confirmer
+                                                            mot de passe">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-lg-12">
+                                                    <div class="mb-3">
+                                                        <a href="javascript:void(0);"
+                                                           class="link-primary text-decoration-underline">Oublié
+                                                             ?</a>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-lg-12">
+                                                    <div class="text-end">
+                                                        <button type="submit" class="btn btn-success">Changer
+                                                        mot de passe</button>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                            </div>
+                                            <!--end row-->
+                                        </form>
+                                    <!--end tab-pane-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+
+            </div>
+            <!-- container-fluid -->
+        </div><!-- End Page-content -->
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <script>document.write(new Date().getFullYear())</script> © Velzon.
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            Designer et developpé par le groupe JEE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end main content-->
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+
+
+<!--start back-to-top-->
+<button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+    <i class="ri-arrow-up-line"></i>
+</button>
+<!--end back-to-top-->
+
+<!-- JAVASCRIPT -->
+<script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/libs/simplebar/simplebar.min.js"></script>
+<script src="/libs/node-waves/waves.min.js"></script>
+<script src="/libs/feather-icons/feather.min.js"></script>
+<script src="/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="/js/plugins.js"></script>
+
+<!-- apexcharts -->
+<script src="/libs/apexcharts/apexcharts.min.js"></script>
+
+<!-- Vector map-->
+<script src="/libs/jsvectormap/js/jsvectormap.min.js"></script>
+<script src="/libs/jsvectormap/maps/world-merc.js"></script>
+
+<!--Swiper slider js-->
+<script src="/libs/swiper/swiper-bundle.min.js"></script>
+
+<!-- Dashboard init -->
+<script src="/js/pages/dashboard-ecommerce.init.js"></script>
+
+<!-- App js -->
+<script src="/js/app.js"></script>
+</body>
+</html>
